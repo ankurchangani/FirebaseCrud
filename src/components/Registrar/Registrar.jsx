@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { registrarAction } from '../../service/Action/registrarAction';
+import { registerAction } from '../../service/Action/registrarAction';
+
 import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
@@ -30,12 +31,15 @@ const RegisterForm = () => {
       navigate('/registerForm') ;
     }
 
-    dispatch(registrarAction(formData));
+    dispatch(registerAction(formData));
     navigate('/login-Form'); // Navigate only after successful registration
 };
 
 
   return (
+    <>
+    <div className="absolute top-0 left-0  w-full h-screen bg-black overflow-x-auto">
+
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-96">
         <h2 className="text-2xl mb-6 text-center">Register</h2>
@@ -96,6 +100,8 @@ const RegisterForm = () => {
         </button>
       </form>
     </div>
+    </div>
+    </>
   );
 };
 

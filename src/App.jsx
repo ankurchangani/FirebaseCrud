@@ -8,7 +8,7 @@ import ViewData from './components/ViewData/ViewData'
 import Home from './components/Home/Home'
 import EditEmployee from './components/UpdateData/UpdateData';
 import RegisterForm from './components/Registrar/Registrar';
-import LoginForm from './components/LoginForm/LoginForm';
+import LoginForm from './components/LoginForm/LoginForm'
 
 function App() {
 
@@ -18,10 +18,9 @@ function App() {
 
 
       <Routes>
-      <Route path='/' element = {<RegisterForm/>}/>
+      <Route path='/registerfrom' element = {<RegisterForm/>}/>
       <Route path='/login-Form' element = {<LoginForm/>}/>
-      
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path='/add-data' element = {<AddData />}/>
         <Route path='/view-data' element = {<ViewData />}/>
         <Route path="/edit-employee" element={<EditEmployee />} />
